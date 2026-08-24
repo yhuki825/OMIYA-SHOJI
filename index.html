@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大宮商事｜季節を、装う。｜札幌・藤野</title>
+<meta name="description" content="大宮商事は北海道札幌市南区藤野を拠点に、国内アパレルECショップ、ゴルフ・スキー用品のネットショップ、アパレル卸売を営む個人事業です。雪の季節と緑の季節、その両方を装う道具を届けます。">
+<meta name="theme-color" content="#14161A">
+<meta property="og:title" content="大宮商事｜季節を、装う。">
+<meta property="og:description" content="札幌・藤野発。アパレルEC／ゴルフ・スキー用品／アパレル卸売。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314161A'/%3E%3Cpath d='M16 5v22M16 27c-4 0-7-3-7-7' stroke='%237E6CA8' stroke-width='2' fill='none'/%3E%3Ccircle cx='16' cy='9' r='2.4' fill='%23CFC6E4'/%3E%3C/svg%3E">
+
+<style>
+/* ============================================================
+   大宮商事 — Brand Site
+   Concept : 藤野の二季 / Two Seasons of Fujino
+   ============================================================ */
+
+:root{
+  /* --- palette ------------------------------------------- */
+  --sumi:      #14161A;   /* 墨   base dark            */
+  --sumi-2:    #1D2026;   /* 濃墨 panel                */
+  --sumi-3:    #2B2F37;   /* 鉄墨 hairline / border    */
+  --paper:     #F3F2EE;   /* 霞   light ground         */
+  --paper-2:   #E7E5DE;   /* 生成 secondary ground     */
+  --fuji:      #7E6CA8;   /* 藤   brand accent         */
+  --fuji-pale: #CFC6E4;   /* 淡藤 highlight            */
+  --shiba:     #2F6B4E;   /* 芝   green season         */
+  --yuki:      #6E93AE;   /* 雪青 white season         */
+
+  --ink:       #14161A;
+  --ink-soft:  #575C64;
+  --ink-rev:   #F3F2EE;
+  --ink-rev-soft: rgba(243,242,238,.62);
+
+  /* --- type ---------------------------------------------- */
+  --display: "Shippori Mincho B1", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  --body: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --mono: "IBM Plex Mono", "Roboto Mono", monospace;
+
+  /* --- metrics ------------------------------------------- */
+  --pad: clamp(20px, 5vw, 88px);
+  --maxw: 1240px;
+  --rail: 64px;
+  --ease: cubic-bezier(.22,.61,.36,1);
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-weight:400;
+  font-size:clamp(14px,1.02vw,16px);
+  line-height:2;
+  letter-spacing:.05em;
+  overflow-x:hidden;
+  font-feature-settings:"palt" 1;
+}
+
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+ul{ margin:0; padding:0; list-style:none; }
+
+::selection{ background:var(--fuji); color:#fff; }
+
+:focus-visible{
+  outline:2px solid var(--fuji);
+  outline-offset:3px;
+}
+
+/* ============================================================
+   TYPE HELPERS
+   ============================================================ */
+.eyebrow{
+  font-family:var(--mono);
+  font-size:11px;
+  font-weight:400;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--fuji);
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:0 0 22px;
+}
+.eyebrow::before{
+  content:"";
+  width:26px; height:1px;
+  background:currentColor;
+  flex:none;
+}
+.eyebrow--rev{ color:var(--fuji-pale); }
+
+.h-sec{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:clamp(26px,3.5vw,44px);
+  line-height:1.5;
+  letter-spacing:.08em;
+  margin:0 0 26px;
+}
+.h-sec .en{
+  display:block;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.3em;
+  color:var(--ink-soft);
+  margin-top:14px;
+  font-weight:400;
+}
+.lead{
+  max-width:44em;
+  color:var(--ink-soft);
+  font-size:clamp(13.5px,1.05vw,15.5px);
+  line-height:2.3;
+  margin:0;
+}
+.lead--rev{ color:var(--ink-rev-soft); }
+
+.section{
+  padding:clamp(84px,11vw,160px) var(--pad);
+  position:relative;
+}
+.wrap{ max-width:var(--maxw); margin:0 auto; }
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.hdr{
+  position:fixed; inset:0 0 auto 0; z-index:60;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:20px var(--pad);
+  transition:background .5s var(--ease), padding .5s var(--ease), border-color .5s;
+  border-bottom:1px solid transparent;
+}
+.hdr.is-stuck{
+  background:rgba(20,22,26,.88);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  padding-top:12px; padding-bottom:12px;
+  border-bottom-color:var(--sumi-3);
+}
+.brand{ display:flex; align-items:baseline; gap:14px; color:var(--ink-rev); }
+.brand__jp{
+  font-family:var(--display);
+  font-weight:600; font-size:19px; letter-spacing:.24em;
+}
+.brand__en{
+  font-family:var(--mono); font-size:9.5px; letter-spacing:.26em;
+  color:var(--ink-rev-soft);
+}
+
+.nav{ display:flex; align-items:center; gap:clamp(18px,2.4vw,38px); }
+.nav a{
+  font-family:var(--mono);
+  font-size:11px; letter-spacing:.2em;
+  color:var(--ink-rev-soft);
+  position:relative; padding:6px 0;
+  transition:color .3s;
+}
+.nav a span{
+  font-family:var(--body); font-size:12px; letter-spacing:.12em;
+  margin-right:8px; color:var(--ink-rev);
+}
+.nav a::after{
+  content:""; position:absolute; left:0; bottom:0;
+  width:100%; height:1px; background:var(--fuji-pale);
+  transform:scaleX(0); transform-origin:right;
+  transition:transform .45s var(--ease);
+}
+.nav a:hover{ color:var(--ink-rev); }
+.nav a:hover::after{ transform:scaleX(1); transform-origin:left; }
+
+.burger{
+  display:none; width:44px; height:44px;
+  background:none; border:1px solid rgba(243,242,238,.28);
+  border-radius:50%; cursor:pointer; position:relative;
+}
+.burger i{
+  position:absolute; left:13px; width:18px; height:1px;
+  background:var(--ink-rev); transition:.4s var(--ease);
+}
+.burger i:nth-child(1){ top:19px; }
+.burger i:nth-child(2){ top:25px; }
+.is-open .burger i:nth-child(1){ transform:translateY(3px) rotate(28deg); }
+.is-open .burger i:nth-child(2){ transform:translateY(-3px) rotate(-28deg); }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative; min-height:100svh;
+  background:var(--sumi); color:var(--ink-rev);
+  display:flex; align-items:flex-end;
+  overflow:hidden;
+  padding:0 var(--pad) clamp(40px,6vw,76px);
+}
+.hero__media{ position:absolute; inset:0; }
+.hero__media img{
+  width:100%; height:100%; object-fit:cover;
+  opacity:.34; filter:grayscale(.35) contrast(1.05);
+  transform:scale(1.08);
+  animation:heroZoom 18s var(--ease) forwards;
+}
+@keyframes heroZoom{ to{ transform:scale(1); } }
+.hero__media::after{
+  content:""; position:absolute; inset:0;
+  background:
+    linear-gradient(180deg, rgba(20,22,26,.86) 0%, rgba(20,22,26,.38) 38%, rgba(20,22,26,.94) 100%),
+    linear-gradient(90deg, rgba(126,108,168,.22), transparent 55%);
+}
+.hero__canvas{ position:absolute; inset:0; pointer-events:none; }
+
+/* wisteria drape */
+.drape{
+  position:absolute; top:-4px; right:clamp(4%,7vw,12%);
+  width:min(48vw,560px); height:min(58vh,520px);
+  pointer-events:none; overflow:visible;
+}
+.drape .stem{
+  fill:none; stroke:var(--fuji-pale); stroke-width:1;
+  opacity:.5;
+  stroke-dasharray:var(--len); stroke-dashoffset:var(--len);
+  animation:draw 2.6s var(--ease) forwards;
+}
+@keyframes draw{ to{ stroke-dashoffset:0; } }
+.drape .bud{
+  opacity:0;
+  animation:bud 1.1s var(--ease) forwards;
+  transform-box:fill-box; transform-origin:center;
+}
+@keyframes bud{ from{ opacity:0; transform:translateY(-6px) scale(.4);} to{ opacity:.85; transform:none; } }
+.drape__sway{ animation:sway 9s ease-in-out infinite alternate; transform-origin:50% 0; }
+@keyframes sway{ from{ transform:rotate(-1.1deg);} to{ transform:rotate(1.1deg);} }
+
+.hero__inner{
+  position:relative; z-index:2;
+  width:100%; max-width:var(--maxw); margin:0 auto;
+  display:grid; grid-template-columns:1fr auto; gap:40px; align-items:end;
+}
+.hero__title{
+  writing-mode:vertical-rl;
+  font-family:var(--display);
+  font-weight:800;
+  font-size:clamp(40px,7.4vw,96px);
+  line-height:1.24;
+  letter-spacing:.13em;
+  margin:0;
+  height:min(62vh,600px);
+  text-shadow:0 2px 40px rgba(20,22,26,.6);
+}
+.hero__title .mark{ color:var(--fuji-pale); }
+.hero__title span{
+  display:inline-block; opacity:0;
+  animation:riseIn 1s var(--ease) forwards;
+}
+@keyframes riseIn{ from{ opacity:0; transform:translateY(26px);} to{opacity:1; transform:none;} }
+
+.hero__meta{ max-width:30em; }
+.hero__meta p{
+  margin:0 0 22px;
+  color:var(--ink-rev-soft);
+  font-size:clamp(13px,1vw,15px);
+  line-height:2.35;
+  opacity:0; animation:riseIn 1.1s .9s var(--ease) forwards;
+}
+.hero__tags{
+  display:flex; flex-wrap:wrap; gap:8px;
+  opacity:0; animation:riseIn 1.1s 1.15s var(--ease) forwards;
+}
+.hero__tags li{
+  font-family:var(--mono); font-size:10px; letter-spacing:.18em;
+  padding:7px 13px; border:1px solid rgba(243,242,238,.24); border-radius:99px;
+  color:var(--ink-rev-soft);
+}
+.hero__tags li b{ font-weight:400; color:var(--ink-rev); }
+
+.hero__scroll{
+  position:absolute; left:var(--pad); bottom:clamp(40px,6vw,76px); z-index:3;
+  font-family:var(--mono); font-size:9.5px; letter-spacing:.26em;
+  color:var(--ink-rev-soft);
+  writing-mode:vertical-rl; display:flex; align-items:center; gap:10px;
+}
+.hero__scroll::after{
+  content:""; width:1px; height:56px;
+  background:linear-gradient(var(--fuji-pale), transparent);
+  animation:scrollPulse 2.4s ease-in-out infinite;
+}
+@keyframes scrollPulse{ 0%,100%{ transform:scaleY(.45); opacity:.5;} 50%{ transform:scaleY(1); opacity:1;} }
+.hero__scroll span{ transform-origin:center; }
+
+/* ============================================================
+   SEASON RAIL (signature)
+   ============================================================ */
+.rail{
+  position:fixed; right:24px; top:50%; transform:translateY(-50%);
+  z-index:50; height:min(46vh,340px); width:var(--rail);
+  display:flex; align-items:center; justify-content:center;
+  pointer-events:none;
+  opacity:0; transition:opacity .6s var(--ease);
+}
+.rail.is-on{ opacity:1; }
+.rail__line{
+  position:relative; width:2px; height:100%; border-radius:2px;
+  background:linear-gradient(180deg,
+    var(--yuki) 0%, #A9BBC9 22%, var(--fuji-pale) 44%,
+    var(--fuji) 60%, #6C8A63 80%, var(--shiba) 100%);
+  opacity:.55;
+}
+.rail__dot{
+  position:absolute; left:50%; top:0;
+  width:9px; height:9px; margin-left:-4.5px; margin-top:-4.5px;
+  border-radius:50%; background:var(--paper);
+  box-shadow:0 0 0 1px rgba(20,22,26,.25), 0 0 18px 3px rgba(207,198,228,.75);
+  transition:top .18s linear;
+}
+.rail__label{
+  position:absolute; right:26px; top:0; transform:translateY(-50%);
+  writing-mode:vertical-rl;
+  font-family:var(--mono); font-size:9px; letter-spacing:.24em;
+  color:var(--ink-soft); white-space:nowrap;
+  transition:top .18s linear, color .5s;
+}
+body.on-dark .rail__label{ color:var(--ink-rev-soft); }
+
+/* ============================================================
+   PHILOSOPHY
+   ============================================================ */
+.philo{ background:var(--paper); }
+.philo__grid{
+  display:grid; grid-template-columns:auto 1fr; gap:clamp(32px,6vw,84px);
+  align-items:start;
+}
+.philo__vertical{
+  writing-mode:vertical-rl;
+  font-family:var(--display); font-weight:600;
+  font-size:clamp(20px,2.5vw,32px); line-height:2.05; letter-spacing:.2em;
+  margin:0; height:min(60vh,520px);
+  border-right:1px solid var(--paper-2);
+  padding-right:clamp(16px,2.4vw,34px);
+}
+.philo__vertical em{ font-style:normal; color:var(--fuji); }
+.philo__body p{ margin:0 0 1.9em; max-width:40em; color:var(--ink-soft); }
+.philo__body p:last-of-type{ margin-bottom:0; }
+.philo__body strong{ color:var(--ink); font-weight:500; }
+.sign{
+  margin-top:46px; padding-top:26px;
+  border-top:1px solid var(--paper-2);
+  display:flex; align-items:baseline; gap:18px; flex-wrap:wrap;
+}
+.sign__role{ font-family:var(--mono); font-size:10px; letter-spacing:.24em; color:var(--ink-soft); }
+.sign__name{ font-family:var(--display); font-size:22px; letter-spacing:.18em; }
+
+/* ============================================================
+   MARQUEE
+   ============================================================ */
+.marquee{
+  background:var(--sumi); color:var(--ink-rev);
+  padding:22px 0; overflow:hidden;
+  border-top:1px solid var(--sumi-3); border-bottom:1px solid var(--sumi-3);
+}
+.marquee__track{
+  display:flex; gap:0; width:max-content;
+  animation:slide 44s linear infinite;
+}
+@keyframes slide{ to{ transform:translateX(-50%); } }
+.marquee__track span{
+  font-family:var(--mono); font-size:11px; letter-spacing:.26em;
+  color:var(--ink-rev-soft); padding:0 26px; white-space:nowrap;
+  display:flex; align-items:center; gap:26px;
+}
+.marquee__track span::after{
+  content:""; width:4px; height:4px; border-radius:50%; background:var(--fuji);
+  opacity:.75;
+}
+
+/* ============================================================
+   BUSINESS
+   ============================================================ */
+.biz{ background:var(--sumi); color:var(--ink-rev); }
+.biz__head{ max-width:var(--maxw); margin:0 auto clamp(48px,7vw,86px); }
+.biz .h-sec{ color:var(--ink-rev); }
+.biz .h-sec .en{ color:var(--ink-rev-soft); }
+
+.pillar{
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:clamp(28px,5vw,72px); align-items:center;
+  padding:clamp(40px,6vw,72px) 0;
+  border-top:1px solid var(--sumi-3);
+}
+.pillar:last-child{ border-bottom:1px solid var(--sumi-3); }
+.pillar:nth-child(even) .pillar__media{ order:-1; }
+
+.pillar__media{
+  position:relative; aspect-ratio:4/3; overflow:hidden;
+  background:var(--sumi-2);
+}
+.pillar__media img{
+  width:100%; height:100%; object-fit:cover;
+  filter:grayscale(.5) contrast(1.05); opacity:.9;
+  transition:transform 1.4s var(--ease), filter 1s var(--ease), opacity 1s;
+}
+.pillar:hover .pillar__media img{ transform:scale(1.05); filter:grayscale(0); opacity:1; }
+.pillar__media::after{
+  content:""; position:absolute; inset:auto 0 0 0; height:3px;
+  background:var(--tone,var(--fuji));
+  transform:scaleX(0); transform-origin:left;
+  transition:transform 1.1s var(--ease);
+}
+.pillar.is-in .pillar__media::after{ transform:scaleX(1); }
+
+.pillar__no{
+  position:absolute; top:0; left:0; z-index:2;
+  font-family:var(--mono); font-size:10px; letter-spacing:.22em;
+  background:var(--sumi); color:var(--tone,var(--fuji));
+  padding:10px 16px;
+  border-right:1px solid var(--sumi-3); border-bottom:1px solid var(--sumi-3);
+}
+.pillar__season{
+  position:absolute; right:14px; bottom:16px; z-index:2;
+  writing-mode:vertical-rl;
+  font-family:var(--mono); font-size:9px; letter-spacing:.22em;
+  color:var(--ink-rev); text-shadow:0 1px 8px rgba(0,0,0,.7);
+}
+.pillar__title{
+  font-family:var(--display); font-weight:600;
+  font-size:clamp(22px,2.8vw,34px); line-height:1.55; letter-spacing:.1em;
+  margin:0 0 6px;
+}
+.pillar__en{
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.26em;
+  color:var(--tone,var(--fuji)); margin:0 0 24px;
+}
+.pillar__txt{ color:var(--ink-rev-soft); margin:0 0 26px; max-width:34em; }
+.pillar__list{ display:flex; flex-wrap:wrap; gap:8px; }
+.pillar__list li{
+  font-family:var(--mono); font-size:10px; letter-spacing:.14em;
+  padding:7px 12px; border:1px solid var(--sumi-3); color:var(--ink-rev-soft);
+}
+
+/* ============================================================
+   SEASON WIPE (signature)
+   ============================================================ */
+.season{ background:var(--paper); padding-bottom:clamp(60px,8vw,110px); }
+.season__head{ max-width:var(--maxw); margin:0 auto clamp(40px,6vw,64px); }
+.season__frame{
+  position:relative; max-width:var(--maxw); margin:0 auto;
+  aspect-ratio:16/8; overflow:hidden; background:var(--sumi-2);
+}
+@media (max-width:720px){ .season__frame{ aspect-ratio:4/4.4; } }
+.season__layer{ position:absolute; inset:0; }
+.season__layer img{ width:100%; height:100%; object-fit:cover; }
+.season__layer--green{
+  clip-path:polygon(0 100%, var(--wipe,0%) 100%, calc(var(--wipe,0%) + 12%) 0, 0 0);
+  will-change:clip-path;
+}
+.season__tag{
+  position:absolute; z-index:3;
+  font-family:var(--mono); font-size:10px; letter-spacing:.24em;
+  color:#fff; background:rgba(20,22,26,.62);
+  padding:9px 14px; backdrop-filter:blur(6px);
+}
+.season__tag--w{ top:16px; right:16px; }
+.season__tag--g{ bottom:16px; left:16px; }
+.season__note{
+  max-width:var(--maxw); margin:26px auto 0;
+  display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  font-family:var(--mono); font-size:10px; letter-spacing:.2em; color:var(--ink-soft);
+}
+
+.stats{
+  max-width:var(--maxw); margin:clamp(52px,7vw,90px) auto 0;
+  display:grid; grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--paper-2);
+}
+.stats div{
+  padding:30px 24px 8px;
+  border-right:1px solid var(--paper-2);
+}
+.stats div:last-child{ border-right:0; }
+.stats dt{
+  font-family:var(--mono); font-size:10px; letter-spacing:.22em;
+  color:var(--ink-soft); margin-bottom:14px;
+}
+.stats dd{
+  margin:0; font-family:var(--display); font-weight:600;
+  font-size:clamp(17px,2vw,24px); letter-spacing:.06em; line-height:1.6;
+}
+.stats dd small{
+  display:block; font-family:var(--body); font-weight:400;
+  font-size:12px; letter-spacing:.08em; color:var(--ink-soft); margin-top:8px;
+  line-height:1.9;
+}
+
+/* ============================================================
+   WHOLESALE FLOW
+   ============================================================ */
+.flow{ background:var(--paper-2); }
+.flow__head{ max-width:var(--maxw); margin:0 auto clamp(46px,6vw,72px); }
+.flow__list{
+  max-width:var(--maxw); margin:0 auto;
+  display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+  background:rgba(20,22,26,.12);
+  position:relative;
+}
+.flow__item{
+  background:var(--paper-2);
+  padding:clamp(24px,2.6vw,34px) clamp(18px,2vw,26px) clamp(30px,3.4vw,44px);
+  position:relative;
+}
+.flow__step{
+  font-family:var(--mono); font-size:10px; letter-spacing:.24em;
+  color:var(--fuji); margin-bottom:20px; display:block;
+}
+.flow__item h3{
+  font-family:var(--display); font-weight:600;
+  font-size:clamp(16px,1.5vw,20px); letter-spacing:.1em;
+  margin:0 0 14px; line-height:1.6;
+}
+.flow__item p{ margin:0; font-size:13px; color:var(--ink-soft); line-height:2.1; }
+.flow__item::before{
+  content:""; position:absolute; left:0; top:0; height:2px; width:100%;
+  background:var(--fuji); transform:scaleX(0); transform-origin:left;
+  transition:transform .9s var(--ease);
+}
+.flow__item.is-in::before{ transform:scaleX(1); }
+
+.flow__foot{
+  max-width:var(--maxw); margin:34px auto 0;
+  font-size:12.5px; color:var(--ink-soft); line-height:2.1;
+}
+
+/* ============================================================
+   PROFILE
+   ============================================================ */
+.profile{ background:var(--sumi); color:var(--ink-rev); }
+.profile__grid{
+  display:grid; grid-template-columns:1fr 1.15fr; gap:clamp(34px,6vw,80px);
+  align-items:start;
+}
+.profile__media{ position:relative; aspect-ratio:3/4; overflow:hidden; background:var(--sumi-2); }
+.profile__media img{
+  width:100%; height:100%; object-fit:cover;
+  filter:grayscale(.45) contrast(1.04); opacity:.85;
+}
+.profile__media figcaption{
+  position:absolute; left:0; bottom:0; right:0;
+  padding:16px 18px;
+  background:linear-gradient(transparent, rgba(20,22,26,.9));
+  font-family:var(--mono); font-size:9.5px; letter-spacing:.2em;
+  color:var(--ink-rev-soft);
+}
+.profile .h-sec{ color:var(--ink-rev); }
+.profile .h-sec .en{ color:var(--ink-rev-soft); }
+
+.dl{ margin:0; border-top:1px solid var(--sumi-3); }
+.dl__row{
+  display:grid; grid-template-columns:9.5em 1fr;
+  gap:20px; padding:20px 4px;
+  border-bottom:1px solid var(--sumi-3);
+}
+.dl dt{
+  font-family:var(--mono); font-size:10px; letter-spacing:.2em;
+  color:var(--fuji-pale); padding-top:5px;
+}
+.dl dd{ margin:0; font-size:13.5px; line-height:2.05; color:var(--ink-rev); }
+.dl dd ul li{ position:relative; padding-left:16px; }
+.dl dd ul li::before{
+  content:""; position:absolute; left:0; top:.95em;
+  width:6px; height:1px; background:var(--fuji);
+}
+.dl dd .note{ display:block; font-size:11px; color:var(--ink-rev-soft); margin-top:6px; letter-spacing:.06em; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.ftr{
+  background:var(--sumi); color:var(--ink-rev);
+  padding:clamp(56px,7vw,90px) var(--pad) 40px;
+  border-top:1px solid var(--sumi-3);
+}
+.ftr__inner{
+  max-width:var(--maxw); margin:0 auto;
+  display:flex; justify-content:space-between; align-items:flex-end;
+  gap:36px; flex-wrap:wrap;
+}
+.ftr__mark{
+  font-family:var(--display); font-weight:600;
+  font-size:clamp(30px,5vw,58px); letter-spacing:.24em; margin:0 0 14px;
+}
+.ftr__mark em{ font-style:normal; color:var(--fuji-pale); }
+.ftr__addr{ font-size:12.5px; color:var(--ink-rev-soft); line-height:2.1; }
+.ftr__nav{ display:flex; gap:24px; flex-wrap:wrap; margin-bottom:18px; justify-content:flex-end; }
+.ftr__nav a{ font-family:var(--mono); font-size:10px; letter-spacing:.2em; color:var(--ink-rev-soft); transition:color .3s; }
+.ftr__nav a:hover{ color:var(--fuji-pale); }
+.ftr__copy{
+  max-width:var(--maxw); margin:44px auto 0; padding-top:22px;
+  border-top:1px solid var(--sumi-3);
+  font-family:var(--mono); font-size:9.5px; letter-spacing:.18em;
+  color:rgba(243,242,238,.42);
+  display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap;
+}
+
+.totop{
+  position:fixed; right:20px; bottom:20px; z-index:55;
+  width:46px; height:46px; border-radius:50%;
+  border:1px solid var(--sumi-3); background:rgba(20,22,26,.82);
+  color:var(--ink-rev); cursor:pointer;
+  display:grid; place-items:center;
+  opacity:0; pointer-events:none; transform:translateY(10px);
+  transition:.5s var(--ease); backdrop-filter:blur(8px);
+}
+.totop.is-on{ opacity:1; pointer-events:auto; transform:none; }
+.totop:hover{ border-color:var(--fuji); }
+
+/* ============================================================
+   REVEAL
+   ============================================================ */
+.rv{ opacity:0; transform:translateY(26px); transition:opacity 1s var(--ease), transform 1s var(--ease); }
+.rv.is-in{ opacity:1; transform:none; }
+.rv[data-d="1"]{ transition-delay:.12s; }
+.rv[data-d="2"]{ transition-delay:.24s; }
+.rv[data-d="3"]{ transition-delay:.36s; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1080px){
+  .rail{ display:none; }
+  .profile__grid{ grid-template-columns:1fr; }
+  .profile__media{ aspect-ratio:16/9; max-height:340px; }
+  .flow__list{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:860px){
+  .burger{ display:block; }
+  .nav{
+    position:fixed; inset:0; z-index:-1;
+    background:rgba(20,22,26,.97); backdrop-filter:blur(12px);
+    flex-direction:column; justify-content:center; gap:26px;
+    opacity:0; pointer-events:none; transition:opacity .45s var(--ease);
+  }
+  body.is-open .nav{ opacity:1; pointer-events:auto; z-index:1; }
+  .nav a{ font-size:13px; letter-spacing:.24em; }
+  .nav a span{ font-size:16px; display:block; margin:0 0 6px; text-align:center; }
+  .hdr{ background:rgba(20,22,26,.72); backdrop-filter:blur(10px); }
+
+  .hero__inner{ grid-template-columns:1fr; gap:30px; }
+  .hero__title{ height:min(50vh,420px); }
+  .hero__scroll{ display:none; }
+  .drape{ width:70vw; opacity:.75; }
+
+  .philo__grid{ grid-template-columns:1fr; }
+  .philo__vertical{
+    height:auto; writing-mode:horizontal-tb;
+    border-right:0; border-left:2px solid var(--fuji);
+    padding-right:0; padding-left:18px; font-size:20px; line-height:2;
+  }
+  .pillar{ grid-template-columns:1fr; }
+  .pillar:nth-child(even) .pillar__media{ order:0; }
+  .stats{ grid-template-columns:1fr; }
+  .stats div{ border-right:0; border-bottom:1px solid var(--paper-2); }
+  .stats div:last-child{ border-bottom:0; }
+  .ftr__nav{ justify-content:flex-start; }
+}
+@media (max-width:560px){
+  .flow__list{ grid-template-columns:1fr; }
+  .dl__row{ grid-template-columns:1fr; gap:8px; }
+  .brand__en{ display:none; }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto; }
+  *,*::before,*::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+  }
+  .rv{ opacity:1; transform:none; }
+  .drape .stem{ stroke-dashoffset:0; }
+  .drape .bud{ opacity:.85; }
+  .hero__title span{ opacity:1; }
+  .hero__meta p, .hero__tags{ opacity:1; }
+  .season__layer--green{ clip-path:polygon(0 100%,55% 100%,67% 0,0 0); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="hdr" id="hdr">
+  <a class="brand" href="#top" aria-label="大宮商事 トップへ">
+    <span class="brand__jp">大宮商事</span>
+    <span class="brand__en">OHMIYA SHOJI</span>
+  </a>
+
+  <nav class="nav" id="nav" aria-label="メインナビゲーション">
+    <a href="#philosophy"><span>商いの根</span>PHILOSOPHY</a>
+    <a href="#business"><span>三つの柱</span>BUSINESS</a>
+    <a href="#season"><span>藤野の二季</span>FUJINO</a>
+    <a href="#wholesale"><span>卸の流れ</span>WHOLESALE</a>
+    <a href="#profile"><span>概要</span>PROFILE</a>
+  </nav>
+
+  <button class="burger" id="burger" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav">
+    <i></i><i></i>
+  </button>
+</header>
+
+<!-- ==================== SEASON RAIL ==================== -->
+<div class="rail" id="rail" aria-hidden="true">
+  <div class="rail__line">
+    <span class="rail__dot" id="railDot"></span>
+    <span class="rail__label" id="railLabel">WHITE SEASON</span>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="hero__media">
+    <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=2000&q=80"
+         alt="雪をまとった北海道の山並み"
+         onerror="this.onerror=null;this.src='https://picsum.photos/seed/omiya-hero/2000/1200';">
+  </div>
+  <canvas class="hero__canvas" id="snow" aria-hidden="true"></canvas>
+
+  <!-- 藤棚（signature） -->
+  <svg class="drape" viewBox="0 0 560 520" fill="none" aria-hidden="true">
+    <g class="drape__sway">
+      <path class="stem" style="--len:520;animation-delay:.15s" d="M60 0 C60 120 46 190 62 300"/>
+      <path class="stem" style="--len:520;animation-delay:.35s" d="M150 0 C150 160 132 250 148 400"/>
+      <path class="stem" style="--len:520;animation-delay:.05s" d="M240 0 C240 100 226 170 238 250"/>
+      <path class="stem" style="--len:520;animation-delay:.5s"  d="M330 0 C330 180 314 280 330 460"/>
+      <path class="stem" style="--len:520;animation-delay:.25s" d="M420 0 C420 130 406 210 420 330"/>
+      <path class="stem" style="--len:520;animation-delay:.62s" d="M500 0 C500 90 488 150 498 210"/>
+      <g id="buds"></g>
+    </g>
+  </svg>
+
+  <div class="hero__inner">
+    <div class="hero__meta">
+      <p>北海道札幌市南区藤野。雪が積もる季節と、芝が伸びる季節。<br>
+         その両方の暮らしに必要な服と道具を、大宮商事は仕入れ、選び、届けています。</p>
+      <ul class="hero__tags">
+        <li><b>APPAREL EC</b></li>
+        <li><b>GOLF &amp; SKI</b></li>
+        <li><b>WHOLESALE</b></li>
+        <li>SAPPORO / FUJINO</li>
+      </ul>
+    </div>
+
+    <h1 class="hero__title" id="heroTitle" aria-label="季節を、装う。">
+      <span>季</span><span>節</span><span>を</span><span class="mark">装</span><span>う</span>
+    </h1>
+  </div>
+
+  <div class="hero__scroll"><span>SCROLL</span></div>
+</section>
+
+<!-- ==================== PHILOSOPHY ==================== -->
+<section class="section philo" id="philosophy">
+  <div class="wrap philo__grid">
+    <h2 class="philo__vertical rv">
+      売るのは服と道具<br>届けるのは<em>季節を楽しむ準備</em>
+    </h2>
+
+    <div class="philo__body rv" data-d="1">
+      <p class="eyebrow">PHILOSOPHY / 商いの根</p>
+      <p><strong>大宮商事は、札幌市南区藤野を拠点にした個人事業です。</strong>
+         国内アパレルECショップ、ゴルフ・スキー用品のネットショップ、そしてアパレルの卸売。
+         扱う品目は幅広く見えますが、根は一本です。人が季節に向かうとき、その支度を軽くすること。</p>
+      <p>ブランド品を扱ううえで最も大切にしているのは、状態と説明の正確さです。
+         写真では伝わりにくい生地の厚み、着丈の実寸、使用感の程度。
+         それを省かずに書き切ることが、ネット通販という顔の見えない商いにおける唯一の誠実さだと考えています。</p>
+      <p>スキー用品は雪が降る前に、ゴルフ用品は雪が解けたら。北海道の一年は、はっきりと二つに分かれます。
+         その切り替わりを読みながら在庫を組み、必要な時期に必要な数だけ市場へ流す。
+         <strong>小さな事業だからこそ、季節に対して速く動けます。</strong></p>
+      <p>卸売では、店舗やEC事業者の方の「今期これを何型、いくつ」という具体に応えます。
+         小ロットからの相談にも一点ずつ検品して臨む。積み上げてきたのは、その繰り返しです。</p>
+
+      <div class="sign">
+        <span class="sign__role">REPRESENTATIVE / 代表</span>
+        <span class="sign__name">大宮 拓郎</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== MARQUEE ==================== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" id="mq">
+    <span>BRAND APPAREL</span><span>OUTER</span><span>KNIT</span><span>GOLF WEAR</span>
+    <span>SKI &amp; SNOW</span><span>BAG</span><span>SHOES</span><span>ACCESSORY</span>
+    <span>WHOLESALE</span><span>SAPPORO FUJINO</span>
+  </div>
+</div>
+
+<!-- ==================== BUSINESS ==================== -->
+<section class="section biz" id="business">
+  <div class="biz__head rv">
+    <p class="eyebrow eyebrow--rev">BUSINESS / 事業内容</p>
+    <h2 class="h-sec">三つの柱で、一年を回す。<span class="en">THREE PILLARS, ONE YEAR</span></h2>
+    <p class="lead lead--rev">在庫を仕入れる目、状態を見極める手、届ける速さ。<br>
+      同じ力を、販路と季節を変えて三つの事業に振り分けています。</p>
+  </div>
+
+  <div class="wrap">
+
+    <article class="pillar rv" style="--tone:#7E6CA8">
+      <figure class="pillar__media">
+        <span class="pillar__no">01 — APPAREL</span>
+        <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1400&q=80"
+             alt="ハンガーに並ぶブランドアパレル"
+             onerror="this.onerror=null;this.src='https://picsum.photos/seed/omiya-apparel/1400/1050';">
+        <span class="pillar__season">ALL SEASON</span>
+      </figure>
+      <div class="pillar__body">
+        <h3 class="pillar__title">国内アパレルECショップ運営</h3>
+        <p class="pillar__en">ONLINE STORE ／ BRAND APPAREL</p>
+        <p class="pillar__txt">ブランド品を中心に、国内向けのオンラインショップを運営しています。
+          仕入れた一点ずつを検品し、実寸・素材・状態を自分の言葉で記載。
+          写真は色が転ばないよう自然光で撮り直し、届いたときの印象と差が出ないことを基準にしています。</p>
+        <ul class="pillar__list">
+          <li>ブランドアパレル</li><li>アウター／ニット</li><li>バッグ・シューズ</li><li>実寸表記</li><li>一点検品</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="pillar rv" style="--tone:#6E93AE">
+      <figure class="pillar__media">
+        <span class="pillar__no">02 — GOLF &amp; SKI</span>
+        <img src="https://images.unsplash.com/photo-1522860747225-77a1f2b06ecb?auto=format&fit=crop&w=1400&q=80"
+             alt="雪山のゲレンデとスキー"
+             onerror="this.onerror=null;this.src='https://picsum.photos/seed/omiya-ski/1400/1050';">
+        <span class="pillar__season">WHITE ↔ GREEN</span>
+      </figure>
+      <div class="pillar__body">
+        <h3 class="pillar__title">ゴルフ・スキー用品の<br>ネットショップ運営</h3>
+        <p class="pillar__en">SPORTS GEAR ／ SEASONAL STOCK</p>
+        <p class="pillar__txt">雪が降ればスキー、雪が解ければゴルフ。北海道の二季に合わせて在庫を入れ替えます。
+          ウェアだけでなくクラブ・板・小物まで、実際に使う人の目線で組み合わせを提案。
+          シーズン直前の駆け込みにも応えられるよう、繁忙期は出荷体制を厚くしています。</p>
+        <ul class="pillar__list">
+          <li>ゴルフウェア／クラブ</li><li>スキー・スノーボード</li><li>グローブ・ゴーグル</li><li>季節先行仕入れ</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="pillar rv" style="--tone:#2F6B4E">
+      <figure class="pillar__media">
+        <span class="pillar__no">03 — WHOLESALE</span>
+        <img src="https://images.unsplash.com/photo-1553603227-2358aabe821e?auto=format&fit=crop&w=1400&q=80"
+             alt="出荷を待つ在庫が並ぶ倉庫"
+             onerror="this.onerror=null;this.src='https://picsum.photos/seed/omiya-wholesale/1400/1050';">
+        <span class="pillar__season">B TO B</span>
+      </figure>
+      <div class="pillar__body">
+        <h3 class="pillar__title">アパレル卸売り事業</h3>
+        <p class="pillar__en">WHOLESALE ／ SMALL LOT</p>
+        <p class="pillar__txt">店舗・EC事業者の方へ、アパレルを卸しています。
+          「この価格帯でアウターを何型」といった具体的な条件から在庫を組み、写真とリストで提示。
+          小ロットからの相談にも対応し、検品を通したものだけをお渡しします。</p>
+        <ul class="pillar__list">
+          <li>小ロット対応</li><li>型・数量からの提案</li><li>検品済み出荷</li><li>継続仕入れ</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ==================== SEASON WIPE ==================== -->
+<section class="section season" id="season">
+  <div class="season__head rv">
+    <p class="eyebrow">FUJINO / 拠点</p>
+    <h2 class="h-sec">白い季節と、緑の季節。<span class="en">TWO SEASONS OF SAPPORO MINAMI-KU</span></h2>
+    <p class="lead">札幌市南区藤野は、市街から車で三十分ほどの山あいにあります。
+      冬は雪、夏は緑。一年のうちに景色が二度入れ替わる場所で商いをしていると、
+      需要が動く時期が肌でわかるようになります。スクロールに合わせて、季節が入れ替わります。</p>
+  </div>
+
+  <div class="season__frame" id="seasonFrame">
+    <div class="season__layer">
+      <img src="https://images.unsplash.com/photo-1483664852095-d6cc6870702d?auto=format&fit=crop&w=1800&q=80"
+           alt="雪に覆われた冬の山あいの風景"
+           onerror="this.onerror=null;this.src='https://picsum.photos/seed/omiya-winter/1800/900';">
+    </div>
+    <div class="season__layer season__layer--green" id="seasonGreen">
+      <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=1800&q=80"
+           alt="緑がひろがる夏のゴルフコース"
+           onerror="this.onerror=null;this.src='https://picsum.photos/seed/omiya-green/1800/900';">
+    </div>
+    <span class="season__tag season__tag--w">WHITE SEASON ／ 11 - 4</span>
+    <span class="season__tag season__tag--g">GREEN SEASON ／ 5 - 10</span>
+  </div>
+
+  <div class="season__note">
+    <span>SAPPORO MINAMI-KU FUJINO — 43.0°N</span>
+    <span>SKI GEAR ▸ AUTUMN STOCK ／ GOLF GEAR ▸ SPRING STOCK</span>
+  </div>
+
+  <dl class="stats rv">
+    <div>
+      <dt>BASE ／ 拠点</dt>
+      <dd>札幌市南区 藤野<small>山と街の境目。冬用品の需要を最も近くで見られる立地です。</small></dd>
+    </div>
+    <div>
+      <dt>CHANNEL ／ 販路</dt>
+      <dd>EC ＋ 卸売<small>自社ネットショップでの小売と、事業者向けの卸売を並行して運営。</small></dd>
+    </div>
+    <div>
+      <dt>SCALE ／ 規模</dt>
+      <dd>個人事業<small>代表が仕入れから検品・出荷まで一貫して見るため、判断が早く止まりません。</small></dd>
+    </div>
+  </dl>
+</section>
+
+<!-- ==================== WHOLESALE FLOW ==================== -->
+<section class="section flow" id="wholesale">
+  <div class="flow__head rv">
+    <p class="eyebrow">WHOLESALE FLOW / 卸売の流れ</p>
+    <h2 class="h-sec">条件を聞き、組んで、届ける。<span class="en">FOUR STEPS</span></h2>
+    <p class="lead">卸売は、下記の順序で進みます。数量や型の条件が決まっていない段階からでも、
+      在庫状況をもとに組み立てていきます。</p>
+  </div>
+
+  <ol class="flow__list">
+    <li class="flow__item rv">
+      <span class="flow__step">STEP 01</span>
+      <h3>条件のすり合わせ</h3>
+      <p>取り扱いカテゴリ、価格帯、希望数量、納品時期を確認します。決まっていない項目は、市場の動きを見ながら一緒に決めます。</p>
+    </li>
+    <li class="flow__item rv" data-d="1">
+      <span class="flow__step">STEP 02</span>
+      <h3>在庫の組み立て</h3>
+      <p>条件に沿って在庫を選定し、写真とリストで提示。型・色・サイズの構成は、店頭やECでの見え方を想定して調整します。</p>
+    </li>
+    <li class="flow__item rv" data-d="2">
+      <span class="flow__step">STEP 03</span>
+      <h3>検品</h3>
+      <p>一点ずつ状態を確認し、該当があれば箇所を明記します。基準に満たないものは組み込みません。</p>
+    </li>
+    <li class="flow__item rv" data-d="3">
+      <span class="flow__step">STEP 04</span>
+      <h3>出荷・継続仕入れ</h3>
+      <p>梱包・出荷まで自社で対応。次シーズンに向けた継続的な仕入れのご相談も承ります。</p>
+    </li>
+  </ol>
+
+  <p class="flow__foot rv">※ 取扱カテゴリ・ロット数・納品スケジュールは在庫状況および季節により変動します。</p>
+</section>
+
+<!-- ==================== PROFILE ==================== -->
+<section class="section profile" id="profile">
+  <div class="wrap profile__grid">
+    <figure class="profile__media rv">
+      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80"
+           alt="アパレルの在庫が整理された作業スペース"
+           onerror="this.onerror=null;this.src='https://picsum.photos/seed/omiya-profile/1200/1600';">
+      <figcaption>OHMIYA SHOJI — SAPPORO, HOKKAIDO</figcaption>
+    </figure>
+
+    <div class="rv" data-d="1">
+      <p class="eyebrow eyebrow--rev">PROFILE / 事業概要</p>
+      <h2 class="h-sec">大宮商事<span class="en">OHMIYA SHOJI</span></h2>
+
+      <dl class="dl">
+        <div class="dl__row">
+          <dt>屋号</dt>
+          <dd>大宮商事（おおみやしょうじ）</dd>
+        </div>
+        <div class="dl__row">
+          <dt>代表者</dt>
+          <dd>大宮 拓郎</dd>
+        </div>
+        <div class="dl__row">
+          <dt>所在地</dt>
+          <dd>〒061-2285<br>北海道札幌市南区藤野五条</dd>
+        </div>
+        <div class="dl__row">
+          <dt>事業内容</dt>
+          <dd>
+            <ul>
+              <li>国内アパレルECショップ運営（ブランド品メイン）</li>
+              <li>ゴルフ・スキー用品のネットショップ運営</li>
+              <li>アパレルの卸売り事業</li>
+            </ul>
+          </dd>
+        </div>
+        <div class="dl__row">
+          <dt>取扱品目</dt>
+          <dd>ブランドアパレル／アウター・ニット／バッグ・シューズ／ゴルフウェア・クラブ／スキー・スノーボード用品ほか</dd>
+        </div>
+        <!--
+        <div class="dl__row">
+          <dt>事業形態</dt>
+          <dd>個人事業<span class="note">※ 開業年・許認可番号等を掲載される場合は、正確な情報をご確認のうえ追記してください。</span></dd>
+        </div>
+        -->
+      </dl>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="ftr">
+  <div class="ftr__inner">
+    <div>
+      <p class="ftr__mark">大宮<em>商事</em></p>
+      <p class="ftr__addr">
+        〒061-2285 北海道札幌市南区藤野五条<br>
+        国内アパレルEC／ゴルフ・スキー用品ネットショップ／アパレル卸売
+      </p>
+    </div>
+    <nav class="ftr__nav" aria-label="フッターナビゲーション">
+      <a href="#philosophy">PHILOSOPHY</a>
+      <a href="#business">BUSINESS</a>
+      <a href="#season">FUJINO</a>
+      <a href="#wholesale">WHOLESALE</a>
+      <a href="#profile">PROFILE</a>
+    </nav>
+  </div>
+  <div class="ftr__copy">
+    <span>&copy; <span id="yr">2026</span> OHMIYA SHOJI. ALL RIGHTS RESERVED.</span>
+    <span>SAPPORO / HOKKAIDO / JAPAN</span>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="ページ上部へ戻る">
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+    <path d="M7 12V2M7 2L2.5 6.5M7 2l4.5 4.5" stroke="currentColor" stroke-width="1.2"/>
+  </svg>
+</button>
+
+<script>
+(function(){
+  'use strict';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- hero title stagger ---------- */
+  var chars = document.querySelectorAll('#heroTitle span');
+  chars.forEach(function(c,i){ c.style.animationDelay = (0.35 + i*0.11) + 's'; });
+
+  /* ---------- wisteria buds ---------- */
+  (function(){
+    var g = document.getElementById('buds');
+    if(!g) return;
+    var stems = [
+      {x:60,  y:300}, {x:150, y:400}, {x:240, y:250},
+      {x:330, y:460}, {x:420, y:330}, {x:500, y:210}
+    ];
+    var ns = 'http://www.w3.org/2000/svg';
+    stems.forEach(function(s, si){
+      var n = 5 + (si % 3);
+      for(var i=0;i<n;i++){
+        var t = (i+1)/(n+1);
+        var e = document.createElementNS(ns,'ellipse');
+        var jitter = (i%2 ? 1 : -1) * (4 + (i*2.2));
+        e.setAttribute('cx', s.x + jitter);
+        e.setAttribute('cy', s.y * (0.42 + t*0.62));
+        e.setAttribute('rx', 5.4 - t*1.4);
+        e.setAttribute('ry', 8.2 - t*2.2);
+        e.setAttribute('fill', i%3===0 ? '#CFC6E4' : '#7E6CA8');
+        e.setAttribute('class','bud');
+        e.style.animationDelay = (0.9 + si*0.16 + i*0.09) + 's';
+        g.appendChild(e);
+      }
+    });
+  })();
+
+  /* ---------- snow / petal canvas ---------- */
+  (function(){
+    var cv = document.getElementById('snow');
+    if(!cv || reduce) return;
+    var ctx = cv.getContext('2d'), w=0, h=0, parts=[], raf=null;
+
+    function size(){
+      var r = cv.parentElement.getBoundingClientRect();
+      w = cv.width = r.width * devicePixelRatio;
+      h = cv.height = r.height * devicePixelRatio;
+      cv.style.width = r.width+'px'; cv.style.height = r.height+'px';
+      build();
+    }
+    function build(){
+      var n = Math.min(90, Math.round(w/ devicePixelRatio /14));
+      parts = [];
+      for(var i=0;i<n;i++){
+        parts.push({
+          x: Math.random()*w, y: Math.random()*h,
+          r: (Math.random()*1.9+0.6)*devicePixelRatio,
+          vy: (Math.random()*0.34+0.12)*devicePixelRatio,
+          vx: (Math.random()-0.5)*0.24*devicePixelRatio,
+          a: Math.random()*0.5+0.18,
+          p: Math.random() < 0.18
+        });
+      }
+    }
+    function tick(){
+      ctx.clearRect(0,0,w,h);
+      for(var i=0;i<parts.length;i++){
+        var s = parts[i];
+        s.y += s.vy; s.x += s.vx + Math.sin(s.y/90)*0.2;
+        if(s.y > h+8){ s.y = -8; s.x = Math.random()*w; }
+        if(s.x < -8) s.x = w+8; if(s.x > w+8) s.x = -8;
+        ctx.beginPath();
+        ctx.fillStyle = s.p ? 'rgba(207,198,228,'+s.a+')' : 'rgba(243,242,238,'+s.a+')';
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
+        ctx.fill();
+      }
+      raf = requestAnimationFrame(tick);
+    }
+    size(); tick();
+    window.addEventListener('resize', function(){ cancelAnimationFrame(raf); size(); tick(); });
+    document.addEventListener('visibilitychange', function(){
+      if(document.hidden){ cancelAnimationFrame(raf); }
+      else{ cancelAnimationFrame(raf); tick(); }
+    });
+  })();
+
+  /* ---------- marquee duplicate ---------- */
+  (function(){
+    var mq = document.getElementById('mq');
+    if(!mq) return;
+    mq.innerHTML += mq.innerHTML;
+  })();
+
+  /* ---------- nav ---------- */
+  var burger = document.getElementById('burger');
+  burger.addEventListener('click', function(){
+    var open = document.body.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', open ? 'true':'false');
+    burger.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+  });
+  document.querySelectorAll('#nav a').forEach(function(a){
+    a.addEventListener('click', function(){
+      document.body.classList.remove('is-open');
+      burger.setAttribute('aria-expanded','false');
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && document.body.classList.contains('is-open')){
+      document.body.classList.remove('is-open');
+      burger.setAttribute('aria-expanded','false');
+      burger.focus();
+    }
+  });
+
+  /* ---------- reveal ---------- */
+  var io = new IntersectionObserver(function(en){
+    en.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); }
+    });
+  }, { threshold:0.14, rootMargin:'0px 0px -8% 0px' });
+  document.querySelectorAll('.rv, .pillar, .flow__item').forEach(function(el){ io.observe(el); });
+
+  /* ---------- scroll driven ---------- */
+  var hdr    = document.getElementById('hdr');
+  var rail   = document.getElementById('rail');
+  var dot    = document.getElementById('railDot');
+  var label  = document.getElementById('railLabel');
+  var green  = document.getElementById('seasonGreen');
+  var frame  = document.getElementById('seasonFrame');
+  var totop  = document.getElementById('totop');
+  var darkSections = [];
+
+  function collectDark(){
+    darkSections = [];
+    document.querySelectorAll('.biz, .profile, .ftr, .hero').forEach(function(s){
+      var r = s.getBoundingClientRect();
+      darkSections.push([r.top + window.scrollY, r.bottom + window.scrollY]);
+    });
+  }
+  collectDark();
+  window.addEventListener('resize', collectDark);
+
+  var seasons = [
+    [0.00,'WHITE SEASON'], [0.30,'藤 — FUJINO'], [0.60,'GREEN SEASON'], [0.85,'WHOLESALE']
+  ];
+
+  var ticking = false;
+  function onScroll(){
+    var y = window.scrollY;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    var p = max > 0 ? Math.min(1, Math.max(0, y/max)) : 0;
+
+    hdr.classList.toggle('is-stuck', y > 40);
+    totop.classList.toggle('is-on', y > window.innerHeight * 0.9);
+
+    /* rail */
+    if(y > window.innerHeight * 0.6){ rail.classList.add('is-on'); }
+    else{ rail.classList.remove('is-on'); }
+    dot.style.top = (p*100)+'%';
+    label.style.top = (p*100)+'%';
+    var txt = seasons[0][1];
+    for(var i=0;i<seasons.length;i++){ if(p >= seasons[i][0]) txt = seasons[i][1]; }
+    if(label.textContent !== txt) label.textContent = txt;
+
+    /* dark background detection for rail label color */
+    var mid = y + window.innerHeight/2, dark = false;
+    for(var j=0;j<darkSections.length;j++){
+      if(mid >= darkSections[j][0] && mid <= darkSections[j][1]){ dark = true; break; }
+    }
+    document.body.classList.toggle('on-dark', dark);
+
+    /* season wipe */
+    if(green && frame && !reduce){
+      var fr = frame.getBoundingClientRect();
+      var vh = window.innerHeight;
+      var prog = (vh - fr.top) / (vh + fr.height);
+      prog = Math.min(1, Math.max(0, prog));
+      var wipe = Math.min(112, Math.max(0, (prog - 0.12) / 0.66 * 112));
+      green.style.setProperty('--wipe', wipe + '%');
+    }
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if(!ticking){ ticking = true; requestAnimationFrame(onScroll); }
+  }, {passive:true});
+  onScroll();
+
+  /* ---------- to top ---------- */
+  totop.addEventListener('click', function(){
+    window.scrollTo({ top:0, behavior: reduce ? 'auto' : 'smooth' });
+  });
+
+  /* ---------- year ---------- */
+  document.getElementById('yr').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
